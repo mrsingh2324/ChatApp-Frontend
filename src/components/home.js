@@ -34,7 +34,9 @@ const Home = () => { // Updated component name to start with an uppercase letter
 
             <h1 className='text-2xl font-bold rounded p-5 bg-white/10'>
                 Chat App
+    { socket == true ? ("connected to backend") : (" not connected to backend")}
             </h1><span className=''>{userName}</span>
+        
             <h1 className='text-normal text-blue-500 p-2 bg-white/4'>
                 You are into a chat room where others can also text you and you can also text them
             </h1>
