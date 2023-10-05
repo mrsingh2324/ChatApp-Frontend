@@ -1,3 +1,10 @@
+/* App.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Your custom styles and overrides go here */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +17,98 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* Login.module.css */
+
+.login {
+  width: 400px;
+  height: 440px;
+  border-radius: 3xl;
+  backdrop-blur: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.login.active {
+  transform: scale(1);
+}
+
+.form-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.form-box.login {
+  transform: translateX(0);
+}
+
+.form-box.register {
+  transform: translateX(400px);
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-box .icon {
+  margin-right: 10px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #162938;
+  font-weight: bold;
+  pointer-events: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.input-box input:focus + .label {
+  color: #000;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background-color: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-register {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.login-register a {
+  color: #162938;
+  text-decoration: none;
+  hover: underline;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
