@@ -4,7 +4,7 @@ import { nanoid } from "nanoid";
 import { useLocation } from 'react-router-dom';
 import '../index.css'
 
-const socket = io.connect("https://chat-app-backend-lake.vercel.app/");
+const socket = io.connect("https://chat-app-backend-lake.vercel.app");
 const username = nanoid(4);
 const Home = () => { // Updated component name to start with an uppercase letter
     const location = useLocation();
